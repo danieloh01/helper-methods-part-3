@@ -9,7 +9,14 @@
 </div>
 
 <hr>
-
+<div>
+  <% @movies.each do |movie| %>
+    <div>
+      <%= render partial: "movies/movie_card", locals: { movie: movie } %>
+    </div>
+  <% end %>
+</div>
+<!--
 <table>
   <tr>
     <th>
@@ -36,30 +43,30 @@
     </th>
   </tr>
 
-  <% @movies.each do |movie| %>
-  <tr>
+  <%# @movies.each do |movie| %>-->
+<!--  <tr>
     <td>
-      <%= movie.id %>
-    </td>
+      <%#= movie.id %>-->
+<!--    </td>
 
     <td>
-      <%= movie.title %>
-    </td>
+      <%#= movie.title %>-->
+<!--    </td>
 
     <td>
-      <%= movie.description %>
-    </td>
+      <%#= movie.description %>-->
+<!--    </td>
 
     <td>
-      <%= time_ago_in_words(movie.created_at) %> ago
-    </td>
+      <%#= time_ago_in_words(movie.created_at) %> ago-->
+<!--    </td>
     <td>
-      <%= time_ago_in_words(movie.updated_at) %> ago
-    </td>
+      <%#= time_ago_in_words(movie.updated_at) %> ago-->
+<!--    </td>
 
     <td>
-      <%= link_to "Show details", movie %>
-    </td>
+      <%#= link_to "Show details", movie %>-->
+<!--    </td>
   </tr>
-  <% end %>
-</table>
+  <%# end %>-->
+<!--</table>-->
