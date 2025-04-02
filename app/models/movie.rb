@@ -12,13 +12,12 @@
 class Movie < ApplicationRecord
   validates :title, presence: true
 
-  <div>
-  <% @movies.each do |movie| %>
-    <div>
-      # <%= render partial: "movies/movie_card", locals: { movie: movie } %>
-      <%= render @movie %>
-    </div>
-  </div>
+  # <% @movies.each do |movie| %>
+  #   <div>
+  #     <%= render partial: "movies/movie_card", locals: { movie: movie } %>
+  #     <%= render @movie %>
+  #   </div>
+  # <% end %>
 
 
 end
